@@ -1,0 +1,80 @@
+# ==========================================
+#  RedWine Stock - .gitignore
+# ==========================================
+
+# --- Secretos / configuración local (NO subir) ---
+# Contienen cadena de conexión y clave JWT reales.
+# En el repo queda appsettings.example.json como plantilla.
+appsettings.json
+appsettings.*.json
+!appsettings.example.json
+secrets.json
+*.env
+.env*
+
+# --- Perfiles de publicación (MonsterASP / Web Deploy) ---
+# Tienen usuario/servidor de deploy y el .user guarda la contraseña.
+Properties/PublishProfiles/
+*.pubxml
+*.pubxml.user
+*.publishsettings
+*.azurePubxml
+
+# --- Imágenes subidas por usuarios en runtime ---
+wwwroot/uploads/
+
+# --- Compilación ---
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ll]og/
+[Ll]ogs/
+publish/
+*.zip
+*.7z
+*.rar
+
+# --- Visual Studio / Rider / VS Code ---
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.cache
+*.vspscc
+*.vssscc
+
+# --- Bases de datos locales ---
+*.mdf
+*.ldf
+*.ndf
+*.db
+*.sqlite
+
+# --- NuGet ---
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# --- Testing / coverage ---
+[Tt]est[Rr]esult*/
+coverage*/
+*.coverage
+*.trx
+
+# --- Sistema operativo ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# --- Logs de Serilog y archivos subidos ---
+Logs/
